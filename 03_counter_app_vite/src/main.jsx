@@ -1,10 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { HelloWorld } from './HelloWorld';
+import { FirstApp } from './FirstApp';
+/* import HelloWorldApp from './HelloWorld' */ /* Puesto que exporté la App por defecto no lleva {} la importación. De no ser así tendría que estar entre {} */
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <React.StrictMode>
+        <HelloWorld /> {/* debe ser wl mismo nombre que use en el import. Lo que yo quiera */}
+        <FirstApp /> 
+    </React.StrictMode>
 )

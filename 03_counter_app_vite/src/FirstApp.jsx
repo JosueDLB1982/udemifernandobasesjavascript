@@ -1,4 +1,6 @@
-const newMessage = 'Mensaje inyectado en el HTML'
+import PropTypes from 'prop-types'
+
+/* const newMessage = 'Mensaje inyectado en el HTML'
 const objMessage = {
     message: 'Hola mundo',
     title: 'Inyeccion de objeto en el HTML',
@@ -8,7 +10,7 @@ const greeting = (name) => {
     return (
         `Saludos a todos, mi nombre es ${name}`
     )
-}
+} */
 
 export const FirstApp = ({title, subTitle}) => {
     /* console.log(props) */
@@ -25,7 +27,12 @@ export const FirstApp = ({title, subTitle}) => {
             <h2>{subTitle}</h2>
         </> 
     )
-} 
+}
+
+FirstApp.propTypes = {
+    title: PropTypes.string.isRequired,
+    subTitle: PropTypes.string,
+}
 
     
 

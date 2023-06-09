@@ -30,8 +30,14 @@ export const FirstApp = ({title, subTitle}) => {
 }
 
 FirstApp.propTypes = {
-    title: PropTypes.string.isRequired,
     subTitle: PropTypes.string,
+    title: PropTypes.string/* .isRequired */,
+}
+
+FirstApp.defaultProps = {
+    otroPropDePrueba: 'Este es un prop por defecto creado acá como ejemplo. Ver en React DEV Tools',
+    subTitle: 'subtítulo por defecto',
+    title: 'Este es un título por defecto',
 }
 
     

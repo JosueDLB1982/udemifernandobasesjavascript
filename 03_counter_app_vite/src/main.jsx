@@ -10,8 +10,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         {/* <HelloWorld /> debe ser el mismo nombre que use en el import. Lo que yo quiera */}
         <FirstApp
-            title = 'PropTypes'
-            subTitle =  'Pruebas'
+            title = 'Valores por defecto de PROPS'
+            /* subTitle =  'Pruebas' */
         /> 
     </React.StrictMode>
 )

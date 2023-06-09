@@ -19,7 +19,7 @@ export const FirstApp = () => {
             <p>{newMessage}</p> {/* Se usan {} para inyectar contenido */}
             <p>{objMessage.message}</p>
             <p>{objMessage.title}</p>
-            <code>{JSON.stringify(objMessage)}</code>
+            {/* <code>{JSON.stringify(objMessage)}</code> */}
             <h1>{greeting('Josue López')}</h1>
         </> 
     )

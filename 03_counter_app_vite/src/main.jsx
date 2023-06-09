@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HelloWorld } from './HelloWorld';
 import { FirstApp } from './FirstApp';
+import './styles.css'
 /* import HelloWorldApp from './HelloWorld' */ /* Puesto que exporté la App por defecto no lleva {} la importación. De no ser así tendría que estar entre {} */
 
 

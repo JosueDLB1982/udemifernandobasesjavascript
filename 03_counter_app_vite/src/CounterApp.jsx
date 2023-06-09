@@ -1,11 +1,17 @@
 import PropTypes from 'prop-types'
 
+const handleAdd = (e) => {
+    console.log(e)
+}
 export const CounterApp = ({value}) => {
 
   return (
     <>
         <h1>CounterApp</h1>
         <h2> { value } </h2>
+        <button onClick={ handleAdd }>
+            +1
+        </button>
     </>
   )
 }

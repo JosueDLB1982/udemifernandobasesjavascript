@@ -10,17 +10,19 @@ const greeting = (name) => {
     )
 }
 
-export const FirstApp = () => {
-
+export const FirstApp = ({title, subTitle}) => {
+    /* console.log(props) */
     return (
         <> {/* Fragmento de React */}
-            <div>Ejercicio de creación de componente</div>
-            <p>Prueba de fragmento</p>
-            <p>{newMessage}</p> {/* Se usan {} para inyectar contenido */}
-            <p>{objMessage.message}</p>
-            <p>{objMessage.title}</p>
+            {/* <div>Ejercicio de creación de componente</div>
+            <p>Prueba de fragmento</p> */}
+            {/* <p>{newMessage}</p> Se usan {} para inyectar contenido */}
+            {/* <p>{objMessage.message}</p>
+            <p>{objMessage.title}</p> */}
             {/* <code>{JSON.stringify(objMessage)}</code> */}
-            <h1>{greeting('Josue López')}</h1>
+            {/* <h1>{greeting('Josue López')}</h1> */}
+            <h1>{title}</h1>
+            <h2>{subTitle}</h2>
         </> 
     )
 } 

@@ -5,18 +5,19 @@ export const CounterApp = ( { value } ) => {
 
 const [counter, setCounter] = useState(value)
 
-const handleAdd = () => {
-   // console.log(e)
-   setCounter(counter + 1)
-}
+const incrementHandleAdd = () => setCounter(counter + 1)
+
+const decrementHandleAdd = () => setCounter(counter - 1)
+
+const resetHandleAdd = () => setCounter(value)
 
   return (
     <>
         <h1>CounterApp</h1>
         <h2> { counter } </h2>
-        <button onClick={ handleAdd }>
-            +1
-        </button>
+        <button onClick={ incrementHandleAdd }> +1 </button>
+        <button onClick={ resetHandleAdd }> RESET </button>
+        <button onClick={ decrementHandleAdd }> -1</button>
     </>
   )
 }

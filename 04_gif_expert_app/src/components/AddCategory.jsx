@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { useState } from "react"
 
-export const AddCategory = ( {setCategories, categories} ) => {
+export const AddCategory = ( {onNewCategory} ) => {
 
 const [inputValue, setInputValue] = useState('')
 const inputChange = ({target}) => { /* e.target.value desestructuramos el target en el parametro de la función para no esribir e */
@@ -12,9 +12,10 @@ const inputChange = ({target}) => { /* e.target.value desestructuramos el target
 const onSubmit = (e) => {
     /* console.log(e) */
     e.preventDefault()
-     5
-    /* setCategories(categories => [inputValue, ...categories]) */
-    setCategories( [inputValue, ...categories] )
+    if (inputValue.trim().length <= 1) return
+
+    onNewCategory(inputValue.trim())
+    
     setInputValue('')
 }
 

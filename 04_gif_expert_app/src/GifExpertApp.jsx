@@ -6,7 +6,7 @@ export const GifExpertApp = () => {
 const [categories, setCategories] = useState([]);
 const onAddCategory = (newCategory) => {
     /* console.log('Samuray X') */
-   console.log(newCategory)
+   if(categories.includes(newCategory)) return /* para no incluir busquedas repetidas */
    setCategories([newCategory, ...categories ])
 }
 
@@ -22,8 +22,8 @@ const onAddCategory = (newCategory) => {
         
         <ol>
             { 
-                categories.map((category, i) => {
-                    return <li key={i}>{category}</li>
+                categories.map((category) => {
+                    return <li key={category}>{category}</li>
                 })
             }
         </ol>

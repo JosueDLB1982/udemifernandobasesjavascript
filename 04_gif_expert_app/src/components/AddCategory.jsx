@@ -14,7 +14,7 @@ const onSubmit = (e) => {
     e.preventDefault()
     if (inputValue.trim().length <= 1) return
 
-    onNewCategory(inputValue.trim())
+    onNewCategory(inputValue.trim().toUpperCase())
     
     setInputValue('')
 }

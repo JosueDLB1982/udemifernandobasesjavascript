@@ -1,18 +1,21 @@
-
+import PropTypes from 'prop-types'
 import { useState } from "react"
 
-export const AddCategory = () => {
+export const AddCategory = ( {setCategories, categories} ) => {
 
 const [inputValue, setInputValue] = useState('')
 const inputChange = ({target}) => { /* e.target.value desestructuramos el target en el parametro de la función para no esribir e */
-    console.log(target.value)
+    /* console.log(target.value) */
     setInputValue(target.value)
 }
 
 const onSubmit = (e) => {
-    console.log(e)
+    /* console.log(e) */
     e.preventDefault()
-    console.log(inputValue)
+     5
+    /* setCategories(categories => [inputValue, ...categories]) */
+    setCategories( [inputValue, ...categories] )
+    setInputValue('')
 }
 
   return (
@@ -26,3 +29,8 @@ const onSubmit = (e) => {
     </form>
   )
 }
+
+/* AddCategory.propTypes = {
+  categories: PropTypes.array,
+  setCategories: PropTypes.string
+} */

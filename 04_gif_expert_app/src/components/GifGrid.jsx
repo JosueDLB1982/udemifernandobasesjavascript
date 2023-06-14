@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types'
+import { useEffect } from 'react'
 import {getGifs} from '../helpers/getGifs'
 
 export const GifGrid = ({ category }) => {
+
+    useEffect(() => {
+        getGifs(category)
+    }, [])
    
-    getGifs(category)
 
     return (
         <>

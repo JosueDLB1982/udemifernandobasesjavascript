@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types'
+import {getGifs} from '../helpers/getGifs'
 
 export const GifGrid = ({ category }) => {
-  return (
-    <>
-        <h3>{ category }</h3>
-        <p> Parrafo de prueba ejemplo </p>
-    </>
-  )
+   
+    getGifs(category)
+
+    return (
+        <>
+            <h3>{ category }</h3>
+        </>
+    )
 }
 
 GifGrid.propTypes = {

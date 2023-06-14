@@ -5,12 +5,11 @@ export const AddCategory = ( {onNewCategory} ) => {
 
 const [inputValue, setInputValue] = useState('')
 const inputChange = ({target}) => { /* e.target.value desestructuramos el target en el parametro de la función para no esribir e */
-    /* console.log(target.value) */
+  
     setInputValue(target.value)
 }
 
 const onSubmit = (e) => {
-    /* console.log(e) */
     e.preventDefault()
     if (inputValue.trim().length <= 1) return
 
@@ -31,7 +30,8 @@ const onSubmit = (e) => {
   )
 }
 
-/* AddCategory.propTypes = {
+AddCategory.propTypes = {
   categories: PropTypes.array,
-  setCategories: PropTypes.string
-} */
+  setCategories: PropTypes.string,
+  onNewCategory: PropTypes.func
+}

@@ -31,7 +31,7 @@ const onSubmit = (e) => {
 }
 
 AddCategory.propTypes = {
-  categories: PropTypes.array,
+  categories: PropTypes.array.isRequired,
   setCategories: PropTypes.string,
   onNewCategory: PropTypes.func
 }

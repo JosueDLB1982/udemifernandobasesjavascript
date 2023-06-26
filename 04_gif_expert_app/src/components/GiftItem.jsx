@@ -11,6 +11,6 @@ export const GiftItem = ({title, url}) => {
   )
 }
 GiftItem.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired
 }
